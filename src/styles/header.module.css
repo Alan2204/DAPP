@@ -1,0 +1,9 @@
+.headersyles{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:coral;
+    color: white;
+}
