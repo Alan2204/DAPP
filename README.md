@@ -1,4 +1,5 @@
 # Dependencias
+
  detect-provider  2.0.0" npm i -D @metamask/providers
  bootstrap  5.3.3"
  web3 4.15.0 
