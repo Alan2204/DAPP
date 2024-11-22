@@ -16,8 +16,6 @@ contract Manager{
 
     }
 
-    
-
     function getProductos() public view returns(Product[] memory){  //lo marcamos como view cuando es una funcion de consulta para que no necesite gas
         return product;
     }
@@ -26,11 +24,6 @@ contract Manager{
     function setProductos(string memory name, uint price) public{  //Funcion para añadir productos
         require(msg.sender == _owner, "Solo el propietario puede hacer esta accion.");
         product.push(Product(name, price));
-    }
-
-    modifier is_Owner() {
-        require(msg.sender == _owner);
-        _;
     }
 
 }

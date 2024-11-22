@@ -34,6 +34,7 @@ class App extends React.Component{
   }
 
 
+
   async registraProductos(event) {
     await servicesHandler.setProductos(this.state.form_name_conf, this.state.form_price_conf, this.state.accounts[0]);
     await this.getProductos(this.state.accounts[0]);
@@ -66,10 +67,10 @@ class App extends React.Component{
           <div className="col-4">
             <div>
               <lab>Nuevo producto</lab>
-              <input onChange={this.handleChangeNameProductos} type="text" className="form-control" id="nameInput" placeholder="Ingresa el nombre del evento"/>
+              <input onChange={this.handleChangeNameProductos} type="text" className="form-control" id="nameInput" placeholder="Ingresa el nombre del producto"/>
             </div>
             <div>
-              <label>precio</label>
+              <label>Precio</label>
               <input onChange={this.handleChangePrecioProductos} type="text" className="form-control" id="nameInput" placeholder="Ingresa el precio del producto"/>
             </div>
             <button className="btn btn-primary" onClick={this.registraProductos}>Submit</button>
@@ -79,8 +80,10 @@ class App extends React.Component{
               {this.state.productos.map((producto, i) => {
                 return(
                   <div key={i}>
-                          <span>{producto.name} {producto.price}</span>
-                          <button className="btn btn-sm btn-success" >Comprar</button>
+                      <h5 class = "card-header">{producto.name}</h5>
+                      <div class ="card-body">
+                        <h1>{producto.price}</h1>
+                      </div>
                   </div>)
               })}
             </Contenedor>
