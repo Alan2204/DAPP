@@ -1,0 +1,8 @@
+.container{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /*Ajusta los elementos en varias lineas*/
+}
+
+

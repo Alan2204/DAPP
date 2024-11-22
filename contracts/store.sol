@@ -2,7 +2,7 @@
 pragma solidity ^0.8.12;
 
 contract Manager{
-    address private _owner;
+    address public _owner;
 
     struct Product{
         string name;
@@ -15,6 +15,8 @@ contract Manager{
         _owner = msg.sender;
 
     }
+
+    
 
     function getProductos() public view returns(Product[] memory){  //lo marcamos como view cuando es una funcion de consulta para que no necesite gas
         return product;
@@ -30,11 +32,5 @@ contract Manager{
         require(msg.sender == _owner);
         _;
     }
-
-   /* modifier is_Registered() {
-        Customer memory customer = customers[msg.sender];
-        require(keccak256(abi.encode(customer.name)) != keccak256(""));
-        _;
-    }*/
 
 }
