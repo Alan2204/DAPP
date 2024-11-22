@@ -1,3 +1,13 @@
+# Dependencias
+
+ detect-provider  2.0.0" npm i -D @metamask/providers
+ bootstrap  5.3.3"
+ web3 4.15.0 
+ solidity ^8.12
+ react 18.3.1
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
